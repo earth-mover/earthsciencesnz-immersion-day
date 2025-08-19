@@ -35,3 +35,8 @@ xarray>=2025.7.1
 xradar
 xvec
 zarr>=3.1
+
+# Development dependencies
+pre-commit
+ruff
+nbqa

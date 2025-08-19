@@ -26,7 +26,7 @@ This workshop demonstrates how the combined NIWA/MetService organizations can le
 ## AWS Specifics
 
 - **AWS region**: `us-east-1`
-- **AWS services required**: 
+- **AWS services required**:
   - SageMaker
   - Standard S3 Bucket + [IAM Role](https://docs.earthmover.io/setup/manage-storage#aws-s3-buckets)
 - **Notebook requirements**: See [requirements.txt](./requirements.txt)
