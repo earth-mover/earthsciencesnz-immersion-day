@@ -1,7 +1,8 @@
 # requirements.txt
-arraylake>=0.22
+arraylake>=0.23.1
 cartopy
 cftime
+cf-xarray
 coiled
 dask[complete]
 distributed
@@ -11,7 +12,8 @@ gcsfs
 geopandas
 h5netcdf
 h5py
-icechunk>=1.1.2
+icechunk>=1.1.4
+ipyleaflet
 jq
 matplotlib
 meteostat
