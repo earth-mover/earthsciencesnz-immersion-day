@@ -19,6 +19,7 @@ matplotlib
 meteostat
 nc-time-axis
 netcdf4
+numbagg
 numcodecs>=0.16.2
 numpy
 obstore
@@ -29,6 +30,7 @@ pydap
 rasterio
 rasterix
 requests
+rich
 s3fs
 scipy
 seaborn
