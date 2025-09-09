@@ -1,7 +1,7 @@
 # Lab 1: Catalog Exploration and Interaction
 
 **Duration**: 50 minutes
-**Presenter**: Tom Nichols (Earthmover)
+**Presenter**: [Tom Nicholas](https://github.com/TomNicholas) (Earthmover)
 
 ## Overview
 

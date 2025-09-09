@@ -1,7 +1,7 @@
 # Lab 2: Studying Anomalous Rainfall
 
 **Duration**: 50 minutes
-**Presenter**: Deepak Cherian (Earthmover)
+**Presenter**: [Deepak Cherian](https://github.com/dcherian) (Earthmover)
 
 ## Overview
 
