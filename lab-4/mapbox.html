@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Earthmover XYZ Tiles</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.7.0/mapbox-gl.js"></script>
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+	// TO MAKE THE MAP APPEAR YOU MUST ADD YOUR ACCESS TOKEN FROM https://account.mapbox.com
+	mapboxgl.accessToken = 'pk.eyJ1IjoiZGNoZXJpYW4iLCJhIjoiY21mN2JiY2ZoMG5zeDJpbXh1eTVqMzQzeSJ9.IN3-sza0LGq1rSeKEBtnFQ';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/light-v11',
+        zoom: 2,
+        center: [160, -30.826],
+    });
+
+    map.on('load', () => {
+        map.addSource('wms-test-source', {
+            'type': 'raster',
+            // use the tiles option to specify a WMS tile source URL
+            // https://docs.mapbox.com/style-spec/reference/sources/
+            'tiles': [
+                // CHANGE THIS URL TO YOUR DATASET's URL
+                 "https://compute.earthmover.io/v1/services/tiles/earthmover-public/era5-surface-aws/main/spatial/tiles/WebMercatorQuad/{z}/{y}/{x}?variables=t2&colorscalerange=280,300&width=512&height=512"
+            ],
+            'tileSize': 256
+        });
+        map.addLayer(
+            {
+                'id': 'wms-test-layer',
+                'type': 'raster',
+                'source': 'wms-test-source',
+                'paint': {
+                    'raster-opacity': 0.5
+                }
+            },
+        );
+    });
+
+    map.on('style.load', function() {
+    map.on('click', function(e) {
+    var coordinates = e.lngLat;
+    new mapboxgl.Popup()
+      .setLngLat(coordinates)
+      .setHTML('you clicked here: <br/>' + coordinates)
+      .addTo(map);
+  });
+});
+</script>
+
+</body>
+</html>
