@@ -1,9 +1,12 @@
 # Earth Sciences New Zealand Immersion Day
 
-<div align="center">
-  <img src="./assets/earthmover-logo.svg" alt="Earthmover" height="60" style="margin-right: 40px;">
-  <img src="./assets/aws-logo.svg" alt="AWS" height="60" style="margin-left: 40px;">
-</div>
+<table align="center">
+  <tr>
+    <td><img src="./assets/earthmover-logo.svg" alt="Earthmover" height="60"></td>
+    <td width="80"></td>
+    <td><img src="./assets/aws-logo.svg" alt="AWS" height="60"></td>
+  </tr>
+</table>
 
 ---
 
