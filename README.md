@@ -1,4 +1,11 @@
-# earthsciencesnz-immersion-day
+# Earth Sciences New Zealand Immersion Day
+
+<div align="center">
+  <img src="./assets/earthmover-logo.svg" alt="Earthmover" height="60" style="margin: 20px;">
+  <img src="./assets/aws-logo.svg" alt="AWS" height="60" style="margin: 20px;">
+</div>
+
+---
 
 ## Workshop Description
 
@@ -6,10 +13,10 @@ Welcome to the Earth Sciences New Zealand Immersion Day! This hands-on workshop 
 
 ### What You'll Learn
 
-As a Earth Sciences New Zealand participant, you'll experience firsthand how modern cloud-native data tools can transform your workflow:
+As a NIWA, MetService, or GNS participant, you'll experience firsthand how modern cloud-native data tools can transform your workflow:
 
-- **Discover and Access Data**: Learn how Earthmover's data catalog makes vast datasets easily discoverable and instantly accessible, eliminating the usual data wrangling bottlenecks
-- **Accelerated Analysis**: Experience the speed of performing complex analyses on large geospatial datasets using Xarray and Icechunk - what used to take hours now takes minutes
+- **Discover and Access Data**: Learn how Earthmover's data catalog makes vast multi-dimensional datasets easily discoverable and instantly accessible, eliminating the usual data wrangling bottlenecks
+- **Accelerated Analysis**: Experience the speed of performing complex analyses on large geospatial datasets using Xarray, Zarr and Icechunk - what used to take hours now takes minutes
 - **Cross-Organizational Collaboration**: See how data from different sources can be seamlessly combined to create new insights and data products
 - **Rapid Application Development**: Build a complete web application with interactive maps that queries live data - from concept to deployment in a single session
 
@@ -21,63 +28,85 @@ By the end of this workshop, you'll have:
 3. Created a new derived data product by fusing multiple datasets
 4. Built an interactive web map application that serves your analysis
 
-This workshop demonstrates how the combined NIWA/MetService organizations can leverage modern data infrastructure to accelerate research, improve operational efficiency, and deliver better services to New Zealand.
+This workshop demonstrates how the combined NIWA/MetService/GNS organizations can leverage modern data infrastructure to accelerate research, improve operational efficiency, and deliver better services to New Zealand.
 
-## AWS Specifics
+## Workshop Details
 
-- **AWS region**: `us-east-1`
-- **AWS services required**:
-  - SageMaker
-  - Standard S3 Bucket + [IAM Role](https://docs.earthmover.io/setup/manage-storage#aws-s3-buckets)
-- **Notebook requirements**: See [requirements.txt](./requirements.txt)
-- **AWS infrastructure requirements**: `ml.m5.4xlarge` (16 cpu, 64gb ram) or larger
+**Format**: Two half-day virtual sessions inside an AWS sandbox
+**Dates**:
+- Day 1: Tuesday Sep 9 US / Wednesday Sep 10 NZ — 2:00–6:00 PM PT / 9:00 AM–1:00 PM NZT
+- Day 2: Wednesday Sep 10 US / Thursday Sep 11 NZ — 2:00–6:00 PM PT / 9:00 AM–1:00 PM NZT
 
-## Key Links
+**Join Information**:
+- Google Meet: (see calendar invite)
+- Back-channel (Slack): [earthmover-community.slack.com](https://join.slack.com/t/earthmover-community/shared_invite/zt-2cwje92ir-xU3CfdG8BI~4CJOJy~sceQ)
 
-- **Proposed agenda** → https://docs.google.com/document/d/1gz9Su0TViXZ61EX1MaYTU8IVQ8mz-uDDpDS8bhK7npQ/edit?tab=t.0
-- **Arraylake Org** → https://app.earthmover.io/earthsciencesnz
-- **Workshop GitHub Repo** → https://github.com/earth-mover/earthsciencesnz-immersion-day
-
-## Workshop Agenda
-
-**Theme**: From Unified Data to Insight: Building a Cross-Organizational Weather Application
-
-### Learning Objectives
+## Learning Objectives
 - Understand how Earthmover's components (Arraylake catalog, Icechunk, Xarray, Zarr, and Flux) create a high-performance, scalable platform for interacting with geospatial Earth system data and for building data applications and products
 - Experience the speed and simplicity of performing analysis on large datasets using Xarray and Icechunk in a native Python environment
 - Create and share a new, derived data product that can be used in a dashboard-style application via the Flux API
 
-### Proposed Schedule
+## Workshop Facilitators
 
-#### Intro / Core Challenge
-Your organizations have vast and valuable datasets. The goal is to make them easily discoverable, combinable, and accessible for rapid product development. Today, we'll show you how.
+**Earthmover Team**:
+- Joe Hamman: Host, Lab 3 lead, closing
+- Deepak Cherian: Lab 2 & Lab 4 co-lead
+- Tom Nichols: Lab 0 & Lab 1 lead (Xarray/Zarr intro; catalog exploration)
 
-Explaining how Earthmover's combination of open source tools and open-core platform provides a managed, performant layer that eliminates infrastructure headaches and accelerates data product delivery.
+**AWS Team**:
+- Karl Stirneman: AWS Account Management
+- Shivonne: AWS onboarding, sandbox + credits, technical support
+- Steve: AWS onboarding, sandbox + credits, technical support
 
-Clarify the catalog technology, differentiating it from a simple STAC implementation by highlighting its performance and governance features.
+## Daily Agendas
 
-#### Lab 0: Getting Started with Xarray and Zarr
-Users will learn the basic concepts behind Xarray and Zarr, and how to use them to access and query large datasets.
+### Day 1: Tuesday Sep 9 US / Wednesday Sep 10 NZ
 
-#### Lab 1: Exploring the Catalog - "Discover what's available"
-Users log into a pre-configured AWS SageMaker Studio environment and explore the pre-loaded data catalog (ERA5, DEM, etc.) in a Jupyter Notebook.
+| Time (NZT) | Time (PT) | Topic | Presenter |
+|------------|-----------|-------|-----------|
+| 9:00-9:30 AM | 2:00-2:30 PM | Welcome + Intros + Overview | Joe (Earthmover) + AWS team |
+| 9:30-10:00 AM | 2:30-3:00 PM | AWS Onboarding | Steve + Shivonne (AWS) |
+| 10:00-10:15 AM | 3:00-3:15 PM | **Break** | |
+| 10:15-11:00 AM | 3:15-4:00 PM | Lab 0 - Introduction to Xarray and Zarr | Tom (Earthmover) |
+| 11:00-11:10 AM | 4:00-4:10 PM | **Break** | |
+| 11:10 AM-12:00 PM | 4:10-5:00 PM | Lab 1 - Catalog Exploration and Interaction | Tom (Earthmover) |
+| 12:00-12:10 PM | 5:00-5:10 PM | **Break** | |
+| 12:10-1:00 PM | 5:10-6:00 PM | Lab 2 - Initial Analysis | Deepak (Earthmover) |
 
-Run basic Xarray queries that are accelerated by Icechunk, experiencing the platform's speed firsthand.
+### Day 2: Wednesday Sep 10 US / Thursday Sep 11 NZ
 
-#### Lab 2: Initial Analysis - "Let's answer a real question"
-Guide users to perform a relevant analysis task, like calculating a fire-weather index for a specific NZ region or identifying areas that have experienced anomalous rainfall. This provides an early, tangible win.
+| Time (NZT) | Time (PT) | Topic | Presenter |
+|------------|-----------|-------|-----------|
+| 9:00-10:00 AM | 2:00-3:00 PM | Lab 3 - Create a New Data Product | Joe (Earthmover) |
+| 10:00-10:30 AM | 3:00-3:30 PM | **Break** | |
+| 10:30-11:30 AM | 3:30-4:30 PM | Lab 4 - Build a Map Dashboard | Deepak (Earthmover) |
+| 11:30-11:40 AM | 4:30-4:40 PM | **Break** | |
+| 11:40 AM-12:15 PM | 4:40-5:15 PM | Breakouts + Time to Explore + Questions | Earthmover and AWS teams |
+| 12:15-1:00 PM | 5:15-6:00 PM | Wrap up | Joe (Earthmover) |
 
-#### Lab 3: Creating a New Data Product
-Create something new by fusing data across domains—the core vision of the merger.
+## AWS and Technical Details
 
-Guide users through a more advanced workflow that combines multiple datasets (e.g., elevation data from the DEM and rainfall data from ERA5).
+- **AWS region**: `us-east-1`
+- **AWS services required**: SageMaker, Standard S3 Bucket + [IAM Role](https://docs.earthmover.io/setup/manage-storage#aws-s3-buckets)
+- **Notebook requirements**: See [requirements.txt](./requirements.txt)
+- **AWS infrastructure requirements**: `ml.m5.4xlarge` (16 cpu, 64gb ram) or larger
 
-They will create a new, derived dataset—for example, a "Landslide Susceptibility Index"—and write it back into the Earthmover platform, making it a new, reusable asset.
+> [!NOTE]
+> If you are running the workshop notebooks outside of SageMaker, see the project `requirements.txt` for a complete listing of project dependencies.
 
-#### Lab 4: Building a Slippy Map
-Users build a simple, interactive WMS slippy tile map in Mapbox that makes live queries to the new data product via Earthmover's Flux API, demonstrating a complete "data-to-decision" workflow.
+## Key Links
 
-#### Wrap-up & Next Steps
-**Narrative**: "Today, you went from raw data to a functioning application in a few hours. Let's discuss how this approach can accelerate your most important projects."
+- **Arraylake Org** → https://app.earthmover.io/earthsciencesnz
+- **Workshop GitHub Repo** → https://github.com/earth-mover/earthsciencesnz-immersion-day
 
-Review the day's accomplishments, discuss scalability architecture, and open the floor for Q&A.
+---
+
+## License
+
+<div align="center">
+  <img src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" alt="CC BY 4.0" width="120">
+</div>
+
+This workshop content is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). You are free to share, adapt, and build upon this material for any purpose, even commercially, as long as you provide appropriate attribution.
+
+**Attribution**: Earth Sciences New Zealand Immersion Day Workshop Materials by Earthmover.
